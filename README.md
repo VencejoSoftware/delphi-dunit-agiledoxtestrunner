@@ -1,4 +1,4 @@
-DUnit-TestDoxTestRunner
+DUnit-AgiledoxTestRunner
 =======================
 
-TestDox output format
+Agiledox output format
