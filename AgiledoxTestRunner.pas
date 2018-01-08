@@ -1,4 +1,4 @@
-(*
+﻿(*
  * Copyright (c) 2016 Alessandro Fragnani de Morais
  * 
  * The contents of this file are subject to the Mozilla Public License Version 2 (the "License");
@@ -131,7 +131,11 @@ begin
   hadLowercase := true;
   for i := 1 to len do
   begin
+{$IF CompilerVersion >= 21}
+    if CharInSet(name[i], ['A' .. 'Z']) then
+{$ELSE}
     if name[i] in ['A' .. 'Z'] then
+{$IFEND}
     begin
       if hadLowercase then
         Result := Result + ' ';
